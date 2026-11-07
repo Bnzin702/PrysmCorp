@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Oficina exemplo | Oficina mecânica</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+:root{--ink:#080d16;--ink2:#111a2b;--line:#243049;--ice:#f4f7fc;--steel:#8a94a6;--pri:#126bff;--glow:#48a0ff;--mut:#eef1f7;--bd:#dde3ee;--tx:#080d16;--mt:#5a6479;--gp:linear-gradient(135deg,#126bff,#48a0ff);--gd:radial-gradient(ellipse at 80% 0%,rgba(18,107,255,.22),transparent 60%),#080d16}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{font-family:"Poppins",system-ui,sans-serif;background:var(--ice);color:var(--tx);-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.6}
+:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:6px}
+svg.i{width:1em;height:1em;stroke:currentColor;fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.w{max-width:1200px;margin:0 auto;padding:0 20px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;min-height:3rem;padding:.75rem 1.5rem;border-radius:.75rem;font:600 .95rem inherit;font-family:inherit;border:0;cursor:pointer;text-decoration:none;transition:all .25s}
+.btn svg{font-size:1.2rem}
+.bp{background:var(--gp);color:#fff;box-shadow:0 10px 30px -10px rgba(18,107,255,.55)}.bp:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.bl{border:1.5px solid rgba(244,247,252,.4);color:var(--ice);background:transparent}.bl:hover{background:rgba(255,255,255,.08)}
+.bo{border:1.5px solid var(--bd);background:#fff;color:var(--tx)}.bo:hover{border-color:var(--pri);color:var(--pri)}
+.eb{display:inline-flex;align-items:center;gap:.6rem;font-size:.75rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--pri)}
+.eb::before{content:"";width:1.5rem;height:2px;background:var(--gp)}
+.dk .eb,.hero .eb{color:var(--glow)}
+.gt{background:var(--gp);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1,h2,h3{letter-spacing:-.02em;line-height:1.15}
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(8,13,22,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hb{height:72px;display:flex;align-items:center;gap:16px}
+.lg{font-weight:700;font-size:1.25rem;color:var(--ice);text-decoration:none;margin-right:auto}.lg b{color:var(--glow)}
+header nav{display:flex}header nav a{color:rgba(244,247,252,.8);text-decoration:none;font-size:.88rem;font-weight:500;padding:8px 12px;border-radius:8px}header nav a:hover{color:var(--glow)}
+.mb{display:none;background:none;border:0;color:var(--ice);font-size:1.7rem;width:44px;height:44px;cursor:pointer}
+#mm{display:none;background:var(--ink);padding:8px 20px 20px;border-top:1px solid var(--line)}#mm.on{display:block}
+#mm a.l{display:block;color:var(--ice);text-decoration:none;font-size:1.05rem;font-weight:500;padding:14px 0;border-bottom:1px solid var(--line)}#mm .btn{width:100%;margin-top:16px}
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;background:var(--gd);color:var(--ice);padding-top:80px;isolation:isolate}
+.hero .deco{position:absolute;right:-6%;top:50%;width:min(56vw,580px);transform:translateY(-50%);z-index:-1;opacity:.2;stroke:#48a0ff;fill:none}.hero .deco.s{right:auto;left:-4%;top:auto;bottom:6%;width:min(30vw,260px);transform:none;opacity:.1}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:140px;z-index:-1;background:linear-gradient(to top,var(--ink),transparent)}
+.hero h1{font-size:clamp(2.2rem,5.5vw,3.8rem);margin:20px 0;max-width:15ch}
+.hero p{max-width:34rem;color:rgba(244,247,252,.82);font-size:1.05rem}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.fe{list-style:none;padding:0;margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;max-width:760px}
+.fe li{display:flex;align-items:center;gap:12px;font-size:.88rem;font-weight:500}
+.ib{width:40px;height:40px;border-radius:10px;border:1px solid rgba(18,107,255,.4);background:rgba(18,107,255,.1);color:var(--glow);display:grid;place-items:center;font-size:1.2rem;flex:none}
+section{padding:96px 0}.mu{background:var(--mut)}
+.dk{background:var(--gd);color:var(--ice)}
+.sh{text-align:center;max-width:680px;margin:0 auto 48px}.sh h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin:14px 0 12px}.sh p{color:var(--mt)}.dk .sh p{color:var(--steel)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.ab{aspect-ratio:4/5;border-radius:20px;background:radial-gradient(ellipse at 30% 10%,rgba(72,160,255,.35),transparent 60%),var(--ink);box-shadow:0 10px 30px -12px rgba(8,13,22,.3);display:grid;place-items:center;overflow:hidden}.ab svg{width:88%;height:auto;opacity:.9}.g2 img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:20px;box-shadow:0 10px 30px -12px rgba(8,13,22,.3)}
+.g2 h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin:14px 0 18px}.g2 p{color:var(--mt)}
+.vl{list-style:none;padding:0;margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vl li{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--bd);border-radius:12px;padding:14px;font-size:.88rem;font-weight:500}.vl svg{color:var(--pri);font-size:1.3rem}
+.gr{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.cd{display:flex;flex-direction:column;background:#fff;border:1px solid var(--bd);border-radius:18px;padding:28px;transition:all .3s}
+.cd:hover{transform:translateY(-4px);border-color:rgba(18,107,255,.45);box-shadow:0 10px 30px -12px rgba(8,13,22,.28)}
+.cd .ic{width:48px;height:48px;border-radius:12px;background:var(--ink);color:var(--glow);display:grid;place-items:center;font-size:1.5rem;transition:all .3s}.cd:hover .ic{background:var(--gp);color:#fff}
+.cd h3{font-size:1.1rem;margin:20px 0 8px}.cd p{color:var(--mt);font-size:.88rem;flex:1}.cd .btn{margin-top:22px;width:100%;min-height:44px;font-size:.88rem}
+.nt{text-align:center;font-size:.75rem;color:var(--mt);margin-top:28px}
+.dc{background:rgba(17,26,43,.65);border:1px solid var(--line);border-radius:18px;padding:28px;transition:border-color .3s}.dc:hover{border-color:rgba(18,107,255,.55)}
+.dc svg{font-size:1.8rem;color:var(--glow)}.dc h3{color:var(--ice);font-size:1.1rem;margin:20px 0 8px}.dc p{color:var(--steel);font-size:.88rem}
+.st{position:relative;background:#fff;border:1px solid var(--bd);border-radius:18px;padding:28px}
+.st .n{position:absolute;right:22px;top:14px;font-size:3rem;font-weight:700;color:rgba(18,107,255,.1)}
+.st .ib2{width:48px;height:48px;border-radius:50%;background:var(--gp);color:#fff;display:grid;place-items:center;font-size:1.3rem;box-shadow:0 10px 30px -10px rgba(18,107,255,.55)}
+.st h3{font-size:1.1rem;margin:20px 0 8px}.st p{color:var(--mt);font-size:.88rem}
+.cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:40px}
+.ag{display:grid;grid-template-columns:1fr 1.4fr;gap:40px}
+.ag h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin:14px 0}.ag>div>p{color:var(--mt)}
+.inf{display:flex;gap:12px;margin-top:24px;border:1px solid rgba(18,107,255,.3);background:#e6efff;border-radius:12px;padding:16px;font-size:.85rem}.inf svg{color:var(--pri);font-size:1.3rem}
+form{display:grid;grid-template-columns:1fr 1fr;gap:20px;background:#fff;border:1px solid var(--bd);border-radius:18px;padding:32px;box-shadow:0 10px 30px -12px rgba(8,13,22,.2)}
+.f{display:block}.f.w2{grid-column:1/-1}.f span.l{font-size:.85rem;font-weight:500}.f span.l em{color:var(--pri);font-style:normal}.f span.l i{color:var(--mt);font-style:normal}
+input,select,textarea{display:block;width:100%;margin-top:6px;min-height:48px;border:1px solid var(--bd);border-radius:12px;background:#fff;padding:0 16px;font:inherit;font-size:1rem;color:var(--tx);outline:none;transition:all .2s}
+textarea{padding:12px 16px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--pri);box-shadow:0 0 0 4px rgba(18,107,255,.15)}
+[aria-invalid="true"]{border-color:#d93a3a}
+.er{color:#d93a3a;font-size:.85rem;margin-top:4px}
+.fs{grid-column:1/-1}.fs .btn{width:100%;min-height:56px}.fs p{font-size:.75rem;color:var(--mt);text-align:center;margin-top:12px}.fs a{text-decoration:underline;color:inherit;cursor:pointer}
+.ok{background:#fff;border:1px solid var(--bd);border-radius:18px;padding:40px;text-align:center;box-shadow:0 10px 30px -12px rgba(8,13,22,.2)}.ok svg{font-size:3rem;color:var(--pri)}.ok h3{margin:16px 0 8px;font-size:1.3rem}.ok p{color:var(--mt)}
+.ok .btns{justify-content:center}
+.bx{max-width:560px;margin:0 auto;background:#fff;border:1px solid var(--bd);border-radius:18px;padding:36px;text-align:center}.bx svg{font-size:1.8rem;color:var(--pri)}.bx p{color:var(--mt);margin:14px 0 24px}
+.lc{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.lc h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin:14px 0 32px}
+.li{display:flex;gap:16px;margin-bottom:20px}.li svg{font-size:1.4rem;color:var(--glow);margin-top:4px}.li h3{font-size:1rem;color:var(--ice)}.li p,.li a{color:var(--steel);font-size:.88rem;text-decoration:none}
+.map{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px dashed var(--line);border-radius:18px;background:rgba(17,26,43,.65);padding:32px;min-height:280px;color:var(--steel);font-size:.88rem}.map svg{font-size:2.2rem;color:var(--glow);margin-bottom:14px}
+.fq{max-width:760px;margin:0 auto}
+details{background:#fff;border:1px solid var(--bd);border-radius:14px;margin-bottom:12px;padding:0 20px}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:600;padding:18px 0;min-height:56px}summary::-webkit-details-marker{display:none}
+summary svg{transition:transform .25s;color:var(--pri)}details[open] summary svg{transform:rotate(180deg)}
+details p{color:var(--mt);padding-bottom:18px;font-size:.92rem}
+footer{background:var(--ink);color:var(--steel);padding:56px 0 24px;font-size:.88rem}
+.fg{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px}footer h3{color:var(--ice);font-size:.9rem;margin-bottom:14px}
+footer ul{list-style:none;padding:0;display:grid;gap:8px}footer a{color:inherit;text-decoration:none;cursor:pointer}footer a:hover{color:var(--glow)}
+.fb{margin-top:40px;padding-top:20px;border-top:1px solid var(--line);text-align:center;font-size:.8rem}
+.up{position:fixed;right:16px;bottom:16px;width:48px;height:48px;border-radius:50%;border:0;background:var(--gp);color:#fff;font-size:1.3rem;display:none;place-items:center;cursor:pointer;box-shadow:0 10px 30px -10px rgba(18,107,255,.55);z-index:40}.up.on{display:grid}
+#pv{position:fixed;inset:0;z-index:90;background:rgba(8,13,22,.7);display:none;place-items:center;padding:20px}#pv.on{display:grid}
+#pv div{background:#fff;border-radius:18px;padding:32px;max-width:520px;max-height:90vh;overflow:auto}#pv h3{margin-bottom:12px}#pv p{color:var(--mt);margin-bottom:12px;font-size:.92rem}#pv .btn{margin-top:8px}
+.rv{opacity:0;transform:translateY(20px);transition:all .7s ease}.rv.on{opacity:1;transform:none}
+@media(max-width:900px){header nav,.hb>.btn{display:none}.mb{display:grid;place-items:center}.g2,.ag,.lc,.fg{grid-template-columns:1fr}.vl{grid-template-columns:1fr}form{grid-template-columns:1fr;padding:22px}section{padding:64px 0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}}
+</style></head><body>
+<header><div class="w hb"><a class="lg" href="#inicio">oficina <b>exemplo</b></a><nav aria-label="Principal" id="nv"></nav><a class="btn bp" style="min-height:44px;padding:8px 16px;font-size:.85rem" href="#agendamento"><i data-i="cal"></i>Agendar</a><button class="mb" id="mb" aria-label="Abrir menu" aria-expanded="false" aria-controls="mm"><i data-i="menu"></i></button></div><div id="mm"></div></header>
+<main>
+<section class="hero" id="inicio"><svg class="deco" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="78" stroke-width="18" stroke-dasharray="20.4 20.4"/><circle cx="100" cy="100" r="62" stroke-width="8"/><circle cx="100" cy="100" r="22" stroke-width="8"/></svg><svg class="deco s" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="78" stroke-width="18" stroke-dasharray="20.4 20.4"/><circle cx="100" cy="100" r="62" stroke-width="8"/><circle cx="100" cy="100" r="22" stroke-width="8"/></svg><div class="w"><span class="eb">Oficina mecânica</span><h1>Seu carro em boas mãos. <span class="gt">Sua tranquilidade em primeiro lugar.</span></h1><p>Na exemplo, cuidamos do seu veículo com atenção, responsabilidade e compromisso com a qualidade. Conte com um atendimento profissional para manter seu carro seguro e pronto para seguir em frente.</p><div class="btns"><a class="btn bp" href="#agendamento"><i data-i="wa"></i>Agendar pelo WhatsApp</a><a class="btn bl" href="#servicos">Conhecer nossos serviços</a></div><ul class="fe"><li><span class="ib"><i data-i="heart"></i></span>Atendimento atencioso</li><li><span class="ib"><i data-i="shield"></i></span>Compromisso com a qualidade</li><li><span class="ib"><i data-i="car"></i></span>Cuidado com o seu veículo</li></ul></div></section>
+<section id="sobre"><div class="w g2"><div class="rv"><div class="ab" aria-hidden="true"><svg viewBox="0 0 300 300" class="g1"><g transform="translate(20 20) scale(1.05)" stroke="#48a0ff" fill="none"><circle cx="100" cy="100" r="78" stroke-width="18" stroke-dasharray="20.4 20.4"/><circle cx="100" cy="100" r="62" stroke-width="8"/><circle cx="100" cy="100" r="22" stroke-width="8"/></g><g transform="translate(150 150) scale(.7)" stroke="#126bff" fill="none"><circle cx="100" cy="100" r="78" stroke-width="18" stroke-dasharray="20.4 20.4"/><circle cx="100" cy="100" r="62" stroke-width="8"/><circle cx="100" cy="100" r="22" stroke-width="8"/></g></svg></div></div><div class="rv"><span class="eb">Sobre a exemplo</span><h2>Mais confiança para você. Mais cuidado com seu carro.</h2><p>A exemplo nasceu com o compromisso de oferecer um atendimento automotivo profissional, transparente e próximo de cada cliente. Nosso objetivo é ajudar você a cuidar do seu veículo com atenção aos detalhes, comunicação clara e respeito.</p><ul class="vl" id="vl"></ul></div></div></section>
+<section class="mu" id="servicos"><div class="w"><div class="sh rv"><span class="eb">Serviços</span><h2>Cuidados completos para o seu veículo</h2><p>Conheça os serviços disponíveis e fale com nossa equipe para entender a melhor solução para o seu carro.</p></div><div class="gr" id="sv"></div><p class="nt">Disponibilidade de cada serviço sujeita à confirmação com a equipe.</p></div></section>
+<section class="dk" id="diferenciais"><div class="w"><div class="sh rv"><span class="eb">Diferenciais</span><h2>Por que escolher a exemplo?</h2></div><div class="gr" id="df"></div></div></section>
+<section id="como"><div class="w"><div class="sh rv"><span class="eb">Como funciona</span><h2>Agendar seu atendimento é simples</h2></div><div class="gr" id="sp"></div><div class="cta"><a class="btn bp" href="#agendamento"><i data-i="wa"></i>Quero agendar meu atendimento</a></div></div></section>
+<section class="mu" id="agendamento"><div class="w ag"><div class="rv"><span class="eb">Agendamento</span><h2>Solicite seu agendamento</h2><p>Preencha os dados abaixo. Montamos uma mensagem organizada e abrimos o WhatsApp da oficina para você enviar.</p><div class="inf"><i data-i="info"></i><p>O envio é uma <strong>solicitação de agendamento</strong>, não uma reserva confirmada. A equipe responderá pelo WhatsApp para confirmar a disponibilidade. Nenhum dado é armazenado neste site.</p></div></div><div class="rv" id="bk"></div></div></section>
+<section id="depoimentos"><div class="w"><div class="sh rv"><span class="eb">Depoimentos</span><h2>A confiança de quem cuida do carro com a gente</h2></div><div class="bx rv"><i data-i="star"></i><p>Estamos construindo nossa história com cada cliente. Entre em contato e conheça nosso atendimento.</p><a class="btn bp" target="_blank" rel="noopener noreferrer" href="https://wa.me/?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20exemplo%20e%20gostaria%20de%20tirar%20uma%20d%C3%BAvida."><i data-i="wa"></i>Falar com a equipe</a></div></div></section>
+<section class="dk" id="contato"><div class="w lc"><div class="rv"><span class="eb">Localização</span><h2>Estamos prontos para atender você</h2><div class="li"><i data-i="pin"></i><div><h3>Endereço</h3><p>Entre em contato pelo WhatsApp para consultar nossa localização e horários de atendimento.</p></div></div><div class="li"><i data-i="clock"></i><div><h3>Horário de funcionamento</h3><p>Consulte os horários pelo WhatsApp.</p></div></div><div class="li"><i data-i="wa"></i><div><h3>WhatsApp</h3><a target="_blank" rel="noopener noreferrer" href="https://wa.me/">Falar pelo WhatsApp</a></div></div><div class="btns"><a class="btn bl" target="_blank" rel="noopener noreferrer" href="https://wa.me/"><i data-i="nav"></i>Como chegar</a><a class="btn bp" target="_blank" rel="noopener noreferrer" href="https://wa.me/"><i data-i="wa"></i>Falar com a equipe</a></div></div><div class="rv"><div class="map"><i data-i="pin"></i><p>O mapa será exibido aqui assim que o endereço for confirmado.</p></div></div></div></section>
+<section id="faq"><div class="w"><div class="sh rv"><span class="eb">FAQ</span><h2>Dúvidas frequentes</h2></div><div class="fq" id="fq"></div></div></section>
+</main>
+<footer><div class="w"><div class="fg"><div><a class="lg" href="#inicio">oficina <b>exemplo</b></a><p style="margin-top:12px;max-width:34ch">Oficina mecânica com atendimento profissional, transparente e próximo, focada no cuidado com o seu veículo.</p></div><div><h3>Navegação</h3><ul id="fn"></ul></div><div><h3>Contato</h3><ul><li>WhatsApp: <a target="_blank" rel="noopener noreferrer" href="https://wa.me/">Falar pelo WhatsApp</a></li></ul></div></div><p class="fb">© <span id="yr"></span> exemplo. Site de demonstração criado pela Prysm Corporation.</p></div></footer>
+<button class="up" id="up" aria-label="Voltar ao topo"><i data-i="up"></i></button>
+<div id="pv" role="dialog" aria-modal="true" aria-label="Privacidade"><div><h3>Privacidade</h3><p>Os dados que você informa no agendamento são usados apenas para montar a mensagem no WhatsApp. O site não armazena essas informações.</p><p>Ao tocar em enviar, a conversa acontece dentro do WhatsApp, que segue as próprias regras de privacidade.</p><button class="btn bp" id="pvx" type="button">Fechar</button></div></div>
+<script>
+var IC={check:'<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>',oil:'<path d="M12 3s6 6.5 6 11a6 6 0 01-12 0c0-4.5 6-11 6-11z"/>',brake:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>',scan:'<path d="M4 8V5a1 1 0 011-1h3M16 4h3a1 1 0 011 1v3M20 16v3a1 1 0 01-1 1h-3M8 20H5a1 1 0 01-1-1v-3M4 12h16"/>',engine:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9L7 7M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/>',wrench:'<path d="M14.7 6.3a4 4 0 00-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 005.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/>',eye:'<path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',shield:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',cal:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4"/>',msg:'<path d="M21 12a8 8 0 01-11.6 7.1L4 20l1-4.6A8 8 0 1121 12z"/>',car:'<path d="M5 16l1.5-5a2 2 0 011.9-1.4h7.2a2 2 0 011.9 1.4L19 16"/><rect x="3" y="16" width="18" height="4" rx="1"/>',heart:'<path d="M12 21s-8-5-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 6-8 11-8 11z"/>',users:'<circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0112 0M16 5a3 3 0 010 6M18 20a6 6 0 00-3-5"/>',clip:'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4h6v3H9zM9 12h6M9 16h4"/>',award:'<circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 21l5-3 5 3-1.5-7"/>',pin:'<path d="M12 21s7-6 7-12a7 7 0 00-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/>',clock:'<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',nav:'<path d="M3 11l18-8-8 18-2-8z"/>',up:'<path d="M12 19V5M5 12l7-7 7 7"/>',star:'<path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/>',wa:'<path d="M12 3a9 9 0 00-7.8 13.5L3 21l4.6-1.2A9 9 0 1012 3z"/><path d="M9 8.5c0 3 3 6 6 6l1-1.5-2-1-1 .8c-.8-.3-1.7-1.2-2-2l.8-1-1-2z"/>',menu:'<path d="M4 7h16M4 12h16M4 17h16"/>',x:'<path d="M6 6l12 12M18 6L6 18"/>',chev:'<path d="M6 9l6 6 6-6"/>',info:'<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>'};
+function svg(n){return '<svg class="i" viewBox="0 0 24 24" aria-hidden="true">'+IC[n]+'</svg>';}
+function icons(r){(r||document).querySelectorAll("i[data-i]").forEach(function(e){e.outerHTML=svg(e.getAttribute("data-i"));});}
+var NAV=[["inicio","Início"],["sobre","Sobre nós"],["servicos","Serviços"],["diferenciais","Diferenciais"],["depoimentos","Depoimentos"],["faq","FAQ"],["contato","Contato"]];
+var SV=[["check","Revisão preventiva","Inspeção de componentes para ajudar a identificar necessidades de manutenção."],["oil","Troca de óleo e filtros","Manutenção conforme as especificações recomendadas para o veículo."],["brake","Freios e suspensão","Avaliação dos componentes relacionados à segurança, estabilidade e conforto."],["scan","Diagnóstico automotivo","Investigação de falhas e identificação de possíveis problemas no veículo."],["engine","Motor e componentes mecânicos","Avaliação e manutenção conforme a necessidade identificada."],["wrench","Manutenção geral","Atendimento para diferentes necessidades de manutenção automotiva."]];
+var VL=[["eye","Transparência nas orientações."],["users","Atendimento humanizado."],["clip","Organização e cuidado."],["award","Qualidade na execução dos serviços."],["heart","Respeito ao cliente e ao veículo."]];
+var DF=[["eye","Atendimento transparente","Orientações claras sobre as necessidades do veículo."],["search","Atenção aos detalhes","Cuidado em cada etapa do atendimento."],["shield","Compromisso com a qualidade","Foco em serviços executados com responsabilidade."],["cal","Facilidade para agendar","Contato direto com a equipe pelo WhatsApp."]];
+var SP=[["msg","Entre em contato","Clique no botão do WhatsApp e fale com a exemplo."],["car","Informe o que seu carro precisa","Conte o que está acontecendo e, se possível, informe o modelo e o ano do veículo."],["cal","Confirme seu horário","Combine a disponibilidade diretamente com a equipe e receba a confirmação do agendamento."]];
+var FQ=[["Como posso agendar um serviço?","Você pode entrar em contato pelo WhatsApp da exemplo para informar o que precisa e combinar o melhor horário disponível."],["Quais serviços a oficina oferece?","Consulte a seção de serviços e fale com nossa equipe para confirmar a disponibilidade do atendimento desejado."],["Preciso agendar antes de levar meu carro?","Recomendamos entrar em contato previamente para consultar a disponibilidade e organizar seu atendimento."],["Como posso saber o valor do serviço?","O valor depende do veículo, do serviço necessário e da avaliação correspondente. Entre em contato para receber orientações sobre o seu caso."],["A oficina atende todos os modelos de veículos?","A compatibilidade depende do veículo e do serviço solicitado. Informe o modelo e o ano pelo WhatsApp para confirmar."],["Como sei se meu carro precisa de revisão?","Ruídos, alterações no comportamento do veículo e avisos no painel podem indicar a necessidade de avaliação. Em caso de dúvida, entre em contato com um profissional."],["Posso tirar dúvidas sem agendar?","Sim. Você pode falar diretamente com nossa equipe pelo WhatsApp para esclarecer dúvidas e verificar as opções de atendimento."]];
+function wa(t){return "https://wa.me/"+(t?"?text="+encodeURIComponent(t):"");}
+function $(s){return document.querySelector(s);}
+$("#nv").innerHTML=NAV.map(function(n){return '<a href="#'+n[0]+'">'+n[1]+'</a>';}).join("");
+$("#mm").innerHTML=NAV.map(function(n){return '<a class="l" href="#'+n[0]+'">'+n[1]+'</a>';}).join("")+'<a class="btn bp" target="_blank" rel="noopener noreferrer" href="'+wa("Olá! Vim pelo site da exemplo e gostaria de agendar um atendimento para meu veículo.")+'"><i data-i="wa"></i>Agendar pelo WhatsApp</a>';
+$("#fn").innerHTML=NAV.map(function(n){return '<li><a href="#'+n[0]+'">'+n[1]+'</a></li>';}).join("")+'<li><a id="pl">Privacidade</a></li>';
+$("#vl").innerHTML=VL.map(function(v){return '<li><i data-i="'+v[0]+'"></i>'+v[1]+'</li>';}).join("");
+$("#sv").innerHTML=SV.map(function(s){return '<article class="cd rv"><span class="ic"><i data-i="'+s[0]+'"></i></span><h3>'+s[1]+'</h3><p>'+s[2]+'</p><a class="btn bo" target="_blank" rel="noopener noreferrer" aria-label="Consultar '+s[1]+' pelo WhatsApp" href="'+wa("Olá! Vim pelo site da exemplo e gostaria de consultar sobre o serviço de "+s[1]+". Poderiam me passar mais informações?")+'"><i data-i="wa"></i>Consultar pelo WhatsApp</a></article>';}).join("");
+$("#df").innerHTML=DF.map(function(s){return '<div class="dc rv"><i data-i="'+s[0]+'"></i><h3>'+s[1]+'</h3><p>'+s[2]+'</p></div>';}).join("");
+$("#sp").innerHTML=SP.map(function(s,i){return '<div class="st rv"><span class="n">0'+(i+1)+'</span><span class="ib2"><i data-i="'+s[0]+'"></i></span><h3>'+s[1]+'</h3><p>'+s[2]+'</p></div>';}).join("");
+$("#fq").innerHTML=FQ.map(function(q){return '<details><summary>'+q[0]+'<i data-i="chev"></i></summary><p>'+q[1]+'</p></details>';}).join("");
+$("#yr").textContent=new Date().getFullYear();
+function opts(){return SV.map(function(s){return '<option>'+s[1]+'</option>';}).join("");}
+var today=new Date().toISOString().slice(0,10),lastLink="";
+function field(id,label,inner,opt,w2){return '<label class="f'+(w2?' w2':'')+'" for="'+id+'"><span class="l">'+label+' '+(opt?'<i>(opcional)</i>':'<em aria-hidden="true">*</em>')+'</span>'+inner+'<p class="er" id="'+id+'-e" role="alert"></p></label>';}
+function form(){
+ $("#bk").innerHTML='<form novalidate id="fm">'+
+ field("name","Nome",'<input id="name" name="name" autocomplete="name">')+
+ field("phone","Telefone para contato",'<input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="(47) 90000-0000">')+
+ field("model","Modelo do veículo",'<input id="model" name="model" placeholder="Ex.: Onix 1.0">')+
+ field("year","Ano do veículo",'<input id="year" name="year" inputmode="numeric" maxlength="4" placeholder="Ex.: 2019">',1)+
+ field("service","Serviço desejado",'<select id="service" name="service"><option value="">Selecione...</option>'+opts()+'<option>Outro / não sei informar</option></select>',0,1)+
+ field("date","Data preferida",'<input id="date" name="date" type="date" min="'+today+'">')+
+ field("time","Horário preferido",'<input id="time" name="time" type="time">')+
+ field("notes","Descrição do problema ou observações",'<textarea id="notes" name="notes" rows="4" maxlength="500"></textarea>',1,1)+
+ '<div class="fs"><button class="btn bp" type="submit"><i data-i="wa"></i>Enviar solicitação pelo WhatsApp</button><p>Ao enviar, seus dados são usados apenas para montar a mensagem no WhatsApp. <a class="pl">Política de privacidade</a></p></div></form>';
+ icons($("#bk"));
+ $("#fm").addEventListener("submit",function(e){e.preventDefault();
+  var v={};["name","phone","model","year","service","date","time","notes"].forEach(function(k){v[k]=$("#"+k).value.trim();});
+  var er={};
+  if(v.name.length<2)er.name="Informe seu nome.";
+  if(!/^[\d\s()+-]{10,20}$/.test(v.phone))er.phone="Informe um telefone válido com DDD.";
+  if(v.model.length<2)er.model="Informe o modelo do veículo.";
+  if(v.year&&!/^(19|20)\d{2}$/.test(v.year))er.year="Ano inválido.";
+  if(!v.service)er.service="Selecione um serviço.";
+  if(!v.date)er.date="Escolha uma data.";else if(v.date<today)er.date="Escolha uma data a partir de hoje.";
+  if(!v.time)er.time="Escolha um horário.";
+  if(v.notes.length>500)er.notes="Máximo de 500 caracteres.";
+  var first=null;
+  ["name","phone","model","year","service","date","time","notes"].forEach(function(k){var f=$("#"+k),m=$("#"+k+"-e");m.textContent=er[k]||"";if(er[k]){f.setAttribute("aria-invalid","true");f.setAttribute("aria-describedby",k+"-e");if(!first)first=f;}else{f.removeAttribute("aria-invalid");f.removeAttribute("aria-describedby");}});
+  if(first){first.focus();return;}
+  var p=v.date.split("-"),L=["Olá! Vim pelo site da exemplo e gostaria de SOLICITAR um agendamento:","","*Nome:* "+v.name,"*Telefone:* "+v.phone,"*Veículo:* "+v.model+(v.year?" ("+v.year+")":""),"*Serviço:* "+v.service,"*Data preferida:* "+p[2]+"/"+p[1]+"/"+p[0],"*Horário preferido:* "+v.time];
+  if(v.notes)L.push("*Observações:* "+v.notes);L.push("","Aguardo a confirmação da disponibilidade. Obrigado!");
+  lastLink=wa(L.join("\n"));window.open(lastLink,"_blank","noopener,noreferrer");
+  $("#bk").innerHTML='<div class="ok" role="status"><i data-i="check"></i><h3>Solicitação pronta!</h3><p>Abrimos o WhatsApp com sua mensagem. Basta tocar em enviar. Aguarde a confirmação da equipe.</p><div class="btns"><a class="btn bp" target="_blank" rel="noopener noreferrer" href="'+lastLink+'"><i data-i="wa"></i>Abrir WhatsApp novamente</a><button type="button" class="btn bo" id="nv2">Nova solicitação</button></div></div>';
+  icons($("#bk"));$("#nv2").addEventListener("click",form);
+ });
+}
+form();icons();
+var mb=$("#mb"),mm=$("#mm");
+mb.addEventListener("click",function(){var o=mm.classList.toggle("on");mb.setAttribute("aria-expanded",o?"true":"false");mb.setAttribute("aria-label",o?"Fechar menu":"Abrir menu");});
+mm.addEventListener("click",function(e){if(e.target.closest("a")){mm.classList.remove("on");mb.setAttribute("aria-expanded","false");}});
+var pv=$("#pv");function pvo(o){pv.classList.toggle("on",o);if(o)$("#pvx").focus();}
+document.addEventListener("click",function(e){if(e.target.closest("#pl,.pl"))pvo(true);if(e.target===pv||e.target.id==="pvx")pvo(false);});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")pvo(false);});
+var up=$("#up");up.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});
+addEventListener("scroll",function(){up.classList.toggle("on",scrollY>600);},{passive:true});
+if("IntersectionObserver"in window){var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add("on");io.unobserve(x.target);}});},{threshold:.12});document.querySelectorAll(".rv").forEach(function(e){io.observe(e);});}else document.querySelectorAll(".rv").forEach(function(e){e.classList.add("on");});
+</script></body></html>

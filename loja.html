@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nome da Loja | Moda Masculina</title>
+<meta name="description" content="Descubra o estilo da Nome da Loja. Explore nossa seleção de moda urbana, confira os produtos disponíveis e compre online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>:root{--bk:#090909;--or:#FF6A00;--gf:#262626;--g1:#383838;--g2:#111;--wh:#F5F5F5;--mut:#a8a8a8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:dark}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bk);color:var(--wh);font-family:Poppins,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--or);outline-offset:2px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+h1,h2,h3{margin:0;line-height:1.1}
+h2{font-weight:800;font-size:clamp(1.7rem,5vw,2.6rem);letter-spacing:-.01em}
+.sub{color:var(--mut);margin:.5rem 0 1.6rem}
+.btn{display:inline-block;border:0;border-radius:8px;padding:.85rem 1.5rem;font-weight:500;cursor:pointer;background:var(--or);color:#111;transition:transform .15s,filter .15s}
+.btn:hover{filter:brightness(1.1);transform:translateY(-1px)}
+.btn.o{background:none;border:1.5px solid var(--wh);color:var(--wh)}
+.btn:disabled{background:var(--g1);color:var(--mut);cursor:not-allowed;transform:none}
+section{padding:64px 0}
+header{position:sticky;top:0;z-index:20;background:var(--bk);border-bottom:2px solid var(--or)}
+.bar{display:flex;align-items:center;gap:14px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.04em}
+.logo img{width:40px;height:40px;border-radius:50%}
+nav{display:flex;gap:18px;margin:0 auto;font-weight:500;font-size:.88rem}
+nav a:hover{color:var(--or)}
+.ic{background:none;border:0;cursor:pointer;position:relative;padding:8px;display:grid;place-items:center}
+.ic svg{width:22px;height:22px;stroke:var(--wh);fill:none;stroke-width:2}
+.cnt{position:absolute;top:0;right:-2px;background:var(--or);color:#111;font-size:.7rem;font-weight:700;border-radius:99px;min-width:18px;height:18px;display:grid;place-items:center}
+.bump{animation:b .4s}@keyframes b{50%{transform:scale(1.5)}}
+#burger{display:none}
+#sbar{display:none;padding:10px 20px;background:var(--gf)}
+#sbar input{width:100%;padding:.7rem 1rem;border-radius:8px;border:1px solid var(--g1);background:var(--bk)}
+@media(max-width:860px){nav{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bk);padding:14px 20px;gap:14px;margin:0;border-bottom:2px solid var(--or)}nav.open{display:flex}#burger{display:grid}.sp{margin-left:auto}}
+.hero{padding:0;background:radial-gradient(ellipse at 70% 40%,#383838 0%,#111 55%,#090909 100%);overflow:hidden}
+.hg{display:grid;grid-template-columns:1fr;align-items:center;gap:30px;min-height:min(640px,88vh);padding:40px 0}
+.tag{display:inline-block;border:1px solid var(--or);color:var(--or);border-radius:99px;padding:.2rem .9rem;font-size:.75rem;font-weight:500;margin-bottom:1rem}
+.hero h1{font-weight:800;font-size:clamp(2.4rem,7.5vw,5rem);letter-spacing:-.02em}
+.hero p{color:#cfcfcf;max-width:460px;margin:1.2rem 0 1.8rem}
+.hb{display:flex;gap:12px;flex-wrap:wrap}
+.hero img{width:100%;max-width:440px;justify-self:center;border-radius:50%;box-shadow:0 0 0 3px var(--or),0 30px 80px #000}
+@media(max-width:760px){.hg{grid-template-columns:1fr;text-align:left}.hero img{max-width:280px;order:-1}}
+.ben{background:var(--gf)}
+.bg{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:20px 0;font-size:.85rem;font-weight:500}
+.bg div{display:flex;align-items:center;gap:10px}
+.bg i{width:8px;height:8px;background:var(--or);border-radius:50%;flex:none}
+@media(max-width:700px){.bg{grid-template-columns:1fr 1fr}}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+.chip{border:1px solid var(--g1);background:var(--gf);border-radius:99px;padding:.4rem 1rem;font-size:.85rem;cursor:pointer;font-weight:500}
+.chip.on{background:var(--or);color:#111;border-color:var(--or)}
+.tools select,.tools input[type=text]{background:var(--gf);border:1px solid var(--g1);border-radius:8px;padding:.5rem .8rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:20px}
+.card{background:var(--gf);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s}
+.card:hover{transform:translateY(-3px)}
+.ph{aspect-ratio:4/5;background:linear-gradient(160deg,var(--g1),var(--g2));display:grid;place-items:center;color:var(--mut);font-size:.78rem;text-align:center;padding:12px;position:relative;cursor:pointer;border:0;width:100%}
+.ph em{z-index:1;position:absolute;top:10px;left:10px;background:var(--or);color:#111;font-style:normal;font-weight:700;font-size:.68rem;padding:.15rem .6rem;border-radius:99px}
+.ci{padding:14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.ci h3{font-size:1rem;font-weight:700}
+.pr{color:var(--or);font-weight:700;font-size:1.1rem}
+.pr s{color:var(--mut);font-weight:400;font-size:.85rem;margin-left:6px}
+.sw{display:flex;gap:6px}.sw span{width:14px;height:14px;border-radius:50%;border:1px solid #666}
+.av{font-size:.78rem;color:var(--mut)}
+.ci .btn{margin-top:auto;padding:.65rem}
+.empty{padding:40px;text-align:center;color:var(--mut);grid-column:1/-1}
+.demo{font-size:.75rem;color:var(--mut);margin-top:14px}
+.ab{background:linear-gradient(180deg,var(--g2),var(--bk))}
+.abg{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+.abg img{width:100%;max-width:380px;border-radius:14px;justify-self:center}
+@media(max-width:760px){.abg{grid-template-columns:1fr}}
+.note{background:var(--gf);border-left:3px solid var(--or);border-radius:8px;padding:16px 18px;color:#d0d0d0}
+details{background:var(--gf);border-radius:10px;margin-bottom:10px;padding:0 18px}
+summary{cursor:pointer;padding:15px 0;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:10px}
+summary::after{content:"+";color:var(--or);font-size:1.3rem;line-height:1}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 16px;color:#cfcfcf}
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+@media(max-width:760px){.loc{grid-template-columns:1fr}}
+footer{background:var(--g2);border-top:2px solid var(--or);padding:44px 0 90px;font-size:.88rem;color:#cfcfcf}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}
+footer h4{margin:0 0 10px;color:var(--wh)}footer a{display:block;padding:2px 0}footer a:hover{color:var(--or)}
+.end{margin-top:30px;font-weight:800;color:var(--wh);letter-spacing:.04em}
+.ov{position:fixed;inset:0;background:#000b;z-index:40;display:none}
+.ov.on{display:block}
+.pn{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--bk);z-index:41;transform:translateX(100%);transition:transform .25s;overflow:auto;padding:20px;padding-top:calc(20px + env(safe-area-inset-top,0px));border-left:2px solid var(--or)}
+.pn.on{transform:none}
+.row{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--g1);align-items:center}
+.row .t{width:56px;height:70px;background:var(--g1);border-radius:8px;flex:none}
+.row div.i{flex:1;font-size:.88rem}
+.q button{width:28px;height:28px;border-radius:6px;border:1px solid var(--g1);background:var(--gf);cursor:pointer}
+.opt{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+.opt button{min-width:44px;padding:.5rem .8rem;border-radius:8px;border:1px solid var(--g1);background:var(--gf);cursor:pointer}
+.opt button.on{border-color:var(--or);color:var(--or)}
+.opt button:disabled{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+.fm{display:grid;gap:10px;margin-top:12px}
+.fm input{padding:.7rem;border-radius:8px;border:1px solid var(--g1);background:var(--gf);width:100%}
+.x{float:right}
+table{width:100%;border-collapse:collapse;font-size:.78rem}td,th{padding:6px 4px;border-bottom:1px solid var(--g1);text-align:left}
+#own{position:fixed;inset:0;z-index:70;background:#F4F1EA;color:#18181b;font-family:Inter,Poppins,system-ui,sans-serif;overflow:auto;display:none;color-scheme:light}
+#own.on{display:block}#own *{box-sizing:border-box}
+.ow{max-width:1100px;margin:0 auto;padding:0 16px}
+.oh{background:#0A0A0A;color:#fff;padding-top:env(safe-area-inset-top,0px);position:sticky;top:0;z-index:2}
+.oht{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:14px;padding-bottom:10px}
+.olt{display:flex;align-items:center;gap:10px}.olt b{font-family:"Bebas Neue",sans-serif;font-size:1.3rem;letter-spacing:.16em;font-weight:400;display:block;line-height:1}.olt small{display:block;font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:#C9A86A;font-weight:700}
+.mono{width:40px;height:40px;background:#fff;color:#000;border-radius:12px;display:grid;place-items:center;font-family:"Bebas Neue",sans-serif;font-size:1.3rem;flex:none}
+.oact{display:flex;gap:8px}.oha{display:inline-flex;align-items:center;gap:6px;background:#ffffff1a;border:0;color:#fff;border-radius:99px;padding:.5rem .9rem;font-size:.75rem;font-weight:600;cursor:pointer}
+@media(max-width:560px){.oha span{display:none}}
+.otabs{display:flex;gap:4px;overflow-x:auto}.otabs button{background:none;border:0;border-bottom:2px solid transparent;color:#ffffff99;padding:.8rem 1rem;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;cursor:pointer;white-space:nowrap;display:inline-flex;gap:6px;align-items:center}.otabs button.on{color:#fff;border-color:#C9A86A}
+.oi{width:16px;height:16px;flex:none}.oi.big{width:34px;height:34px;color:#C9A86A}
+.omt{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:20px 0}@media(max-width:760px){.omt{grid-template-columns:1fr 1fr}}
+.oc{background:#fff;border:1px solid #e4e4e7;border-radius:20px;padding:16px}
+.oc span{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:#71717a;font-weight:700}
+.oc p{margin:6px 0 2px;font-family:"Bebas Neue",sans-serif;font-size:2rem;line-height:1;word-break:break-word}
+.oc small{color:#a1a1aa;font-size:.7rem}
+.oc.dk{background:#0A0A0A;color:#fff;border-color:#0A0A0A}.oc.dk span{color:#C9A86A}.oc.dk small{color:#ffffff99}
+.obar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.osr{flex:1;min-width:200px;position:relative}.osr .oi{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:#a1a1aa}
+.osr input{width:100%;padding:.75rem 1rem .75rem 2.4rem;border:1px solid #e4e4e7;border-radius:14px;background:#fff;font:inherit}
+.ob{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:14px;padding:.75rem 1.2rem;font:inherit;font-weight:700;font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.ob.gd{background:#C9A86A;color:#000}.ob.dk{background:#0A0A0A;color:#fff}.ob.ln{background:#fff;border:1px solid #d4d4d8;color:#18181b}
+.omut{color:#71717a;font-size:.8rem;margin:0 0 12px}
+.opr{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid #e4e4e7;border-radius:20px;padding:12px;margin-bottom:10px;flex-wrap:wrap}
+.oth{width:64px;height:76px;border-radius:12px;background:#f4f4f5;display:grid;place-items:center;overflow:hidden;flex:none;color:#a1a1aa}.oth img{width:100%;height:100%;object-fit:cover}
+.opi{flex:1;min-width:160px}.opi b{display:block}.opi small{color:#71717a}
+.ochp{display:inline-block;font-size:.68rem;font-weight:700;border-radius:99px;padding:.1rem .6rem;margin:4px 4px 0 0;background:#f4f4f5}.ochp.z{background:#fee2e2;color:#b91c1c}.ochp.w{background:#fef3c7;color:#b45309}.ochp.g{background:#C9A86A33;color:#7a5c1e}
+.opa{display:flex;gap:6px;flex-wrap:wrap}.opa .ob{padding:.5rem .8rem;font-size:.66rem}
+.ocd{background:#fff;border:1px solid #e4e4e7;border-radius:24px;padding:22px;margin-bottom:16px}
+.ocd h3{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:1.9rem;margin:0 0 6px;letter-spacing:.02em}
+.ocd>p{color:#71717a;font-size:.85rem;margin:0 0 16px}
+.ofm{display:grid;gap:12px;grid-template-columns:1fr 1fr}.ofm .f{grid-column:1/-1}@media(max-width:600px){.ofm{grid-template-columns:1fr}}
+.ofm label{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#3f3f46;display:block}
+.ofm input:not([type=checkbox]):not([type=file]),.ofm select,.ofm textarea{width:100%;margin-top:6px;padding:.7rem .9rem;border:1px solid #e4e4e7;border-radius:14px;background:#fafafa;font:inherit;color:#18181b;text-transform:none;letter-spacing:0;font-weight:400}
+.ofm .ck{text-transform:none;letter-spacing:0;font-size:.85rem;font-weight:500}
+.osz{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.olg{min-height:100%;display:grid;place-items:center;padding:16px;background:#0A0A0A}
+.olc{width:100%;max-width:440px;background:#fff;border-radius:28px;overflow:hidden}.olc .olt{background:#000;color:#fff;padding:22px}
+.olb{padding:28px}.olb h2{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:2rem;margin:10px 0}.olb h2 span{color:#A88648}.olb p{color:#52525b;font-size:.9rem}
+#toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translate(-50%,120px);background:var(--or);color:#111;font-weight:500;padding:.7rem 1.2rem;border-radius:10px;z-index:90;transition:transform .3s}
+#ty{position:fixed;inset:0;z-index:80;background:radial-gradient(ellipse at 50% 0%,#383838,#090909 60%);overflow:auto;display:none;padding:calc(20px + env(safe-area-inset-top,0px)) 20px calc(30px + env(safe-area-inset-bottom,0px))}#ty.on{display:block}.tyw{max-width:560px;margin:0 auto}.tyw h1{font-weight:800;font-size:clamp(2rem,8vw,3rem);margin:.4rem 0}.tyn{font-weight:800;font-size:clamp(2.6rem,12vw,4rem);color:var(--or);line-height:1}.tyc{background:var(--gf);border-radius:14px;padding:14px;margin:16px 0}.tyc pre{white-space:pre-wrap;word-break:break-word;font-family:inherit;font-size:.82rem;color:#d8d8d8;margin:8px 0 0}.opa select{padding:.5rem;border-radius:12px;border:1px solid #d4d4d8;font:inherit;background:#fff;color:#18181b}
+#toast.on{transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}</style>
+</head>
+<body>
+<header>
+ <div class="wrap bar">
+  <a class="logo" href="#top" aria-label="Nome da Loja — início"><span>NOME DA LOJA</span></a>
+  <nav id="nav" aria-label="Principal">
+   <a href="#top">Início</a><a href="#loja" data-cat="">Todos os produtos</a><a href="#loja" data-flag="novo">Lançamentos</a><a href="#loja" data-flag="promo">Promoções</a><a href="#contato">Contato</a><a href="#" id="dono">Dono</a>
+  </nav>
+  <button class="ic sp" id="bs" aria-label="Buscar"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+  <button class="ic" id="bc" aria-label="Abrir carrinho"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11h10.2L20 7H6"/><circle cx="9" cy="20" r="1.3"/><circle cx="17" cy="20" r="1.3"/></svg><span class="cnt" id="cc">0</span></button>
+  <button class="ic" id="burger" aria-label="Menu" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+ </div>
+ <div id="sbar"><input id="q" type="search" placeholder="Buscar por nome, categoria ou descrição" aria-label="Buscar produtos"></div>
+</header>
+
+<main id="top">
+<section class="hero"><div class="wrap hg">
+ <div>
+  <span class="tag">ESTILO URBANO</span>
+  <h1>SEU ESTILO.<br>SUAS REGRAS.</h1>
+  <p>Vista sua personalidade. Descubra peças que combinam com sua atitude e transforme o básico em presença.</p>
+  <div class="hb"><a class="btn" href="#loja" data-cat="">COMPRAR AGORA</a><a class="btn o" href="#loja" data-flag="novo">EXPLORAR COLEÇÃO</a></div>
+ </div>
+ 
+</div></section>
+
+<div class="ben"><div class="wrap bg" id="ben">
+ <div><i></i>Compra online</div><div><i></i>Pagamento seguro</div><div><i></i>Acompanhamento do pedido</div><div><i></i>Atendimento pelo Instagram</div>
+</div></div>
+
+<section id="loja"><div class="wrap">
+ <h2>ESCOLHA SUA PRÓXIMA PEÇA.</h2>
+ <p class="sub">Peças para quem tem estilo próprio.</p>
+ <div class="tools" id="cats"></div>
+ <div class="tools">
+  <select id="fs" aria-label="Tamanho"><option value="">Tamanho</option><option>P</option><option>M</option><option>G</option><option>GG</option><option>Único</option></select>
+  <select id="fc" aria-label="Cor"><option value="">Cor</option><option>Preto</option><option>Branco</option><option>Grafite</option></select>
+  <select id="fp" aria-label="Faixa de preço"><option value="">Preço</option><option value="0-100">Até R$ 100</option><option value="100-200">R$ 100 a 200</option><option value="200-9999">Acima de R$ 200</option></select>
+  <label class="chip"><input type="checkbox" id="fe"> Em estoque</label>
+  <select id="so" aria-label="Ordenar"><option value="new">Mais recentes</option><option value="asc">Menor preço</option><option value="desc">Maior preço</option><option value="name">Nome</option></select>
+ </div>
+ <div class="grid" id="grid"></div>
+ 
+</div></section>
+
+<section class="ab"><div class="wrap abg">
+ <div><h2>NÃO É SÓ ROUPA. É IDENTIDADE.</h2>
+  <p class="sub" style="margin-top:1rem">A Nome da Loja representa atitude, personalidade e estilo. Nossa proposta é oferecer peças para quem busca expressar sua identidade por meio da moda urbana, com combinações versáteis para o dia a dia e para diferentes ocasiões.</p></div>
+ 
+</div></section>
+
+<section><div class="wrap">
+ <h2>QUEM USA, MOSTRA O ESTILO.</h2>
+ <p class="sub">&nbsp;</p>
+ <div class="note">Ainda não há avaliações publicadas. Conheça a loja e seja o primeiro a mostrar o seu estilo.</div>
+</div></section>
+
+<section style="background:var(--gf)"><div class="wrap">
+ <h2>A NOME DA LOJA TAMBÉM ESTÁ NO INSTA.</h2>
+ <p class="sub">Acompanhe os lançamentos, descubra novas combinações e fique por dentro das novidades da Nome da Loja.</p>
+ <a class="btn" href="https://www.instagram.com/" target="_blank" rel="noopener">SEGUIR NO INSTAGRAM</a>
+</div></section>
+
+<section id="contato"><div class="wrap loc">
+ <div><h2>ENCONTRE A NOME DA LOJA.</h2>
+  <p class="sub">Rua Exemplo, 123, Bairro, Cidade, UF.<br>Instagram: <a href="https://www.instagram.com/" target="_blank" rel="noopener" style="color:var(--or)">@sualoja</a><br>Horários de atendimento: a confirmar.</p>
+  <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Rua+Exemplo+123+Bairro+Cidade+UF" target="_blank" rel="noopener">ABRIR NO GOOGLE MAPS</a></div>
+ <div>
+  <h2 style="font-size:1.5rem;margin-bottom:1rem">FAQ</h2>
+  <details><summary>Como posso comprar na Nome da Loja?</summary><p>Escolha os produtos, selecione as opções disponíveis, adicione ao carrinho e siga para o checkout.</p></details>
+  <details><summary>Quais formas de pagamento são aceitas?</summary><p>As formas disponíveis serão apresentadas no checkout, conforme a configuração da loja.</p></details>
+  <details><summary>Como escolho o tamanho certo?</summary><p>Consulte o guia de tamanhos na página do produto. Em caso de dúvida, chame a loja no Instagram.</p></details>
+  <details><summary>Como acompanho meu pedido?</summary><p>Após a compra, use a área de acompanhamento para consultar o estado do pedido.</p></details>
+  <details><summary>Posso trocar ou devolver uma peça?</summary><p>Consulte a Política de Trocas e Devoluções da Nome da Loja.</p></details>
+  <details><summary>A loja realiza entregas?</summary><p>As modalidades e valores serão apresentados conforme a configuração da loja e o seu endereço.</p></details>
+  <details><summary>Como posso entrar em contato?</summary><p>Pelo Instagram oficial @sualoja.</p></details>
+ </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+ <div class="fg">
+  <div><h4>NOME DA LOJA</h4>Moda masculina.<br>Rua Exemplo, 123, Bairro, Cidade, UF.</div>
+  <div><h4>Loja</h4><a href="#loja" data-cat="">Todos os produtos</a><a href="#loja" data-flag="novo">Lançamentos</a></div>
+  <div><h4>Contato</h4><a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram @sualoja</a><a href="#contato">Como chegar</a></div>
+  <div><h4>Institucional</h4><span>Termos de Uso, Política de Privacidade e Política de Trocas: textos a cadastrar pelo proprietário.</span></div>
+ </div>
+ <div class="end">NOME DA LOJA — VISTA SUA IDENTIDADE.</div>
+ <div style="margin-top:8px">© <span id="yr"></span> Nome da Loja</div>
+</div></footer>
+
+<div class="ov" id="ov"></div>
+<aside class="pn" id="cart" aria-label="Carrinho"></aside>
+<aside class="pn" id="pd" aria-label="Produto"></aside>
+<div id="own" role="dialog" aria-label="Área do dono"></div>
+<div id="ty" role="dialog" aria-label="Pedido concluído"></div>
+<div id="toast" role="status"></div>
+
+<script>(function(){try{if(!localStorage.getItem("dmg_db"))localStorage.setItem("dmg_db","{\"products\": {\"p1\": {\"n\": \"Camiseta Oversized Essencial\", \"c\": \"Camisetas\", \"d\": \"Algodão pesado, caimento solto e acabamento reforçado.\", \"p\": 99.9, \"o\": null, \"cor\": [\"Preto\", \"Branco\"], \"st\": {\"P\": 4, \"M\": 6, \"G\": 5, \"GG\": 2}, \"novo\": true, \"ativo\": true, \"img\": \"\", \"t\": 1793739671979}, \"p2\": {\"n\": \"Camiseta Boxy Grafite\", \"c\": \"Camisetas\", \"d\": \"Modelagem ampla e tecido encorpado para o dia a dia.\", \"p\": 89.9, \"o\": 119.9, \"cor\": [\"Grafite\"], \"st\": {\"P\": 2, \"M\": 4, \"G\": 3, \"GG\": 0}, \"novo\": false, \"ativo\": true, \"img\": \"\", \"t\": 1793653271979}, \"p3\": {\"n\": \"Moletom Canguru Street\", \"c\": \"Moletons\", \"d\": \"Moletom com capuz, bolso frontal e interior macio.\", \"p\": 219.9, \"o\": null, \"cor\": [\"Preto\", \"Grafite\"], \"st\": {\"M\": 3, \"G\": 4, \"GG\": 2}, \"novo\": true, \"ativo\": true, \"img\": \"\", \"t\": 1793566871979}, \"p4\": {\"n\": \"Calça Cargo Utility\", \"c\": \"Calças\", \"d\": \"Bolsos laterais, ajuste confortável e tecido resistente.\", \"p\": 189.9, \"o\": 229.9, \"cor\": [\"Preto\"], \"st\": {\"P\": 2, \"M\": 5, \"G\": 5, \"GG\": 3}, \"novo\": false, \"ativo\": true, \"img\": \"\", \"t\": 1793480471979}, \"p5\": {\"n\": \"Bermuda Tactel Run\", \"c\": \"Bermudas\", \"d\": \"Leve, secagem rápida e cós com cordão.\", \"p\": 79.9, \"o\": null, \"cor\": [\"Preto\", \"Grafite\"], \"st\": {\"P\": 5, \"M\": 6, \"G\": 4}, \"novo\": false, \"ativo\": true, \"img\": \"\", \"t\": 1793394071979}, \"p6\": {\"n\": \"Boné Aba Curva\", \"c\": \"Acessórios\", \"d\": \"Regulagem traseira e bordado discreto.\", \"p\": 69.9, \"o\": null, \"cor\": [\"Preto\", \"Branco\"], \"st\": {\"Único\": 10}, \"novo\": true, \"ativo\": true, \"img\": \"\", \"t\": 1793307671979}, \"p7\": {\"n\": \"Jaqueta Corta-Vento\", \"c\": \"Jaquetas\", \"d\": \"Leve, com capuz embutido e bolsos com zíper.\", \"p\": 249.9, \"o\": 299.9, \"cor\": [\"Preto\"], \"st\": {\"M\": 2, \"G\": 3, \"GG\": 1}, \"novo\": false, \"ativo\": true, \"img\": \"\", \"t\": 1793221271979}, \"p8\": {\"n\": \"Meia Cano Alto (kit 3)\", \"c\": \"Acessórios\", \"d\": \"Kit com três pares, algodão e elastano.\", \"p\": 39.9, \"o\": null, \"cor\": [\"Branco\", \"Preto\"], \"st\": {\"Único\": 15}, \"novo\": false, \"ativo\": true, \"img\": \"\", \"t\": 1793134871979}}}")}catch(e){}})();</script><script>/* Banco local (localStorage) usado quando o site roda fora do Claude.
+   Os dados ficam só neste navegador. Para vender de verdade, troque por um backend (ex.: Supabase). */
+(function(){
+ if(window.claude)return;
+ const K="dmg_db";
+ const load=()=>{try{return JSON.parse(localStorage.getItem(K)||"{}")}catch(e){return{}}};
+ const store=d=>{try{localStorage.setItem(K,JSON.stringify(d))}catch(e){throw new Error("Armazenamento cheio")}};
+ const subs=[];const notify=()=>subs.slice().forEach(f=>f());
+ const docsOf=c=>{const d=load()[c]||{};return Object.keys(d).map(id=>({id,exists:true,data:()=>d[id]}))};
+ function doc(path){
+  const [c,id]=path.split("/");
+  return{
+   id,
+   async get(){const v=(load()[c]||{})[id];return{exists:v!==undefined,id,data:()=>v}},
+   async set(v){const d=load();(d[c]=d[c]||{})[id]=JSON.parse(JSON.stringify(v));store(d);notify()},
+   async update(v){const d=load(),o=(d[c]||{})[id];if(!o)throw new Error("Documento não encontrado");Object.assign(o,v);store(d);notify()},
+   async delete(){const d=load();if(d[c])delete d[c][id];store(d);notify()},
+   async acquire(){return{acquired:true}},
+   onSnapshot(cb){const f=()=>{const v=(load()[c]||{})[id];cb({exists:v!==undefined,data:()=>v})};subs.push(f);setTimeout(f,0);return()=>{const i=subs.indexOf(f);if(i>=0)subs.splice(i,1)}}
+  };
+ }
+ function collection(c){
+  return{
+   doc:id=>doc(c+"/"+id),
+   async add(v){const id="p"+Date.now().toString(36)+Math.random().toString(36).slice(2,6);await doc(c+"/"+id).set(v);return{id}},
+   async get(){const docs=docsOf(c);return{size:docs.length,docs}},
+   onSnapshot(cb){const f=()=>{const docs=docsOf(c);cb({docs,size:docs.length})};subs.push(f);setTimeout(f,0);return()=>{const i=subs.indexOf(f);if(i>=0)subs.splice(i,1)}}
+  };
+ }
+ /* reduz a foto antes de guardar, para caber no armazenamento do navegador */
+ function upload(file){
+  return new Promise((res,rej)=>{
+   const img=new Image(),u=URL.createObjectURL(file);
+   img.onload=()=>{const m=900,k=Math.min(1,m/Math.max(img.width,img.height)),c=document.createElement("canvas");
+    c.width=Math.round(img.width*k);c.height=Math.round(img.height*k);c.getContext("2d").drawImage(img,0,0,c.width,c.height);
+    URL.revokeObjectURL(u);res({url:c.toDataURL("image/jpeg",0.8)})};
+   img.onerror=()=>rej(new Error("Imagem inválida"));img.src=u;
+  });
+ }
+ const mods={
+  db:{collection,doc},
+  user:{isOwner:async()=>true},
+  assets:{upload},
+  downloads:{save:async({filename,data})=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([data]));a.download=filename;document.body.appendChild(a);a.click();a.remove()}}
+ };
+ window.claude={use:async n=>mods[n]||null};
+ window.addEventListener("storage",notify);
+})();
+</script>
+<script>let P=[];
+const CL={Preto:"#111",Branco:"#eee",Grafite:"#555"};
+const $=s=>document.querySelector(s),brl=v=>v.toLocaleString("pt-BR",{style:"currency",currency:"BRL"});
+let cart=[];try{cart=JSON.parse(localStorage.getItem("dmg")||"[]")}catch(e){}
+const save=()=>{try{localStorage.setItem("dmg",JSON.stringify(cart))}catch(e){}};
+let F={cat:"",flag:"",q:""};
+const tot=p=>Object.values(p.st).reduce((a,b)=>a+b,0);
+$("#yr").textContent=new Date().getFullYear();
+function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("on");setTimeout(()=>t.classList.remove("on"),2200)}
+function cats(){const cs=[...new Set(P.map(p=>p.c).filter(Boolean))];const cur=$("#fc").value;$("#fc").innerHTML='<option value="">Cor</option>'+[...new Set(P.flatMap(p=>p.cor))].map(k=>`<option ${k===cur?"selected":""}>${esc(k)}</option>`).join("");
+ $("#cats").innerHTML=cs.length?['',...cs].map(c=>`<button class="chip ${F.cat===c?"on":""}" data-c="${esc(c)}">${esc(c)||"Todos"}</button>`).join(""):"";}
+function list(){
+ let r=P.filter(p=>(p.ativo||A.auth)&&(!F.cat||p.c===F.cat)&&(F.flag!=="novo"||p.novo)&&(F.flag!=="promo"||p.o));
+ const q=F.q.toLowerCase();if(q)r=r.filter(p=>(p.n+p.c+p.d).toLowerCase().includes(q));
+ const s=$("#fs").value,c=$("#fc").value,pr=$("#fp").value;
+ if(s)r=r.filter(p=>p.st[s]>0);if(c)r=r.filter(p=>p.cor.includes(c));
+ if(pr){const[a,b]=pr.split("-").map(Number);r=r.filter(p=>p.p>=a&&p.p<=b)}
+ if($("#fe").checked)r=r.filter(p=>tot(p)>0);
+ const o=$("#so").value;r.sort(o==="asc"?(a,b)=>a.p-b.p:o==="desc"?(a,b)=>b.p-a.p:o==="name"?(a,b)=>a.n.localeCompare(b.n):(a,b)=>(b.t||0)-(a.t||0));
+ $("#grid").innerHTML=r.length?r.map(p=>`<article class="card"><button class="ph" data-o="${p.id}" aria-label="Ver ${esc(p.n)}">${p.o?"<em>PROMOÇÃO</em>":p.novo?"<em>LANÇAMENTO</em>":""}${pic(p)}</button><div class="ci"><h3>${esc(p.n)}</h3><div class="pr">${brl(p.p)}${p.o?`<s>${brl(p.o)}</s>`:""}</div><div class="sw">${p.cor.map(k=>`<span title="${esc(k)}" style="background:${CL[k]||"#777"}"></span>`).join("")}</div><div class="av">${tot(p)?"Disponível":"Esgotado"}</div><button class="btn" data-o="${p.id}" ${tot(p)?"":"disabled"}>${tot(p)?"VER E COMPRAR":"ESGOTADO"}</button></div></article>`).join(""):`<div class="empty">${P.length?"Nenhum produto encontrado. Tente outra busca ou limpe os filtros.":"Novidades chegando em breve. Acompanhe no Instagram @sualoja."}</div>`;
+ cats();}
+function go(cat,flag){F.cat=cat||"";F.flag=flag||"";list()}
+document.addEventListener("click",e=>{
+ const a=e.target.closest("[data-cat],[data-flag]");
+ if(a){go(a.dataset.cat,a.dataset.flag);$("#nav").classList.remove("open")}
+ const c=e.target.closest("[data-c]");if(c){F.flag="";F.cat=c.dataset.c;list()}
+ const o=e.target.closest("[data-o]");if(o)openP(o.dataset.o);
+});
+["fs","fc","fp","fe","so"].forEach(i=>$("#"+i).addEventListener("change",list));
+$("#q").addEventListener("input",e=>{F.q=e.target.value;list();if(F.q)location.hash="#loja"});
+$("#bs").onclick=()=>{const b=$("#sbar");b.style.display=b.style.display==="block"?"none":"block";$("#q").focus()};
+$("#burger").onclick=()=>{const n=$("#nav");const o=n.classList.toggle("open");$("#burger").setAttribute("aria-expanded",o)};
+function panel(id,on){$("#ov").classList.toggle("on",on);$("#"+id).classList.toggle("on",on)}
+$("#ov").onclick=()=>{panel("cart",false);panel("pd",false)};
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$("#ov").click()});
+let sel={};
+function openP(id){const p=P.find(x=>x.id===id);sel={id,s:"",c:p.cor[0],q:1};
+ $("#pd").innerHTML=`<button class="ic x" onclick="$('#ov').click()" aria-label="Fechar">✕</button><div class="ph" style="cursor:default;margin:30px 0 14px;border-radius:12px;aspect-ratio:1;overflow:hidden">${pic(p)}</div><h2 style="font-size:1.5rem">${esc(p.n)}</h2><div class="pr" style="margin:6px 0">${brl(p.p)}${p.o?`<s>${brl(p.o)}</s>`:""}</div><p class="av">${esc(p.d)}</p>
+ <b>Tamanho</b><div class="opt" id="os">${Object.keys(p.st).map(s=>`<button data-s="${esc(s)}" ${p.st[s]?"":"disabled"}>${esc(s)}</button>`).join("")}</div>
+ <b>Cor</b><div class="opt" id="oc">${p.cor.map(k=>`<button data-k="${esc(k)}" class="${k===sel.c?"on":""}">${esc(k)}</button>`).join("")}</div>
+ <b>Quantidade</b><div class="q row" style="border:0"><button id="m">−</button><span id="qt">1</span><button id="pl">+</button><span class="av" id="es"></span></div>
+ <button class="btn" style="width:100%;margin-bottom:10px" id="ad">ADICIONAR AO CARRINHO</button><button class="btn o" style="width:100%" id="bn">COMPRAR AGORA</button>
+ <p class="av">Entrega e trocas: conforme configuração da loja.</p>`;
+ $("#os").onclick=e=>{const b=e.target.closest("[data-s]");if(!b)return;sel.s=b.dataset.s;sel.q=1;[...$("#os").children].forEach(x=>x.classList.toggle("on",x===b));$("#qt").textContent=1;$("#es").textContent=p.st[sel.s]+" em estoque"};
+ $("#oc").onclick=e=>{const b=e.target.closest("[data-k]");if(!b)return;sel.c=b.dataset.k;[...$("#oc").children].forEach(x=>x.classList.toggle("on",x===b))};
+ $("#m").onclick=()=>{if(sel.q>1)$("#qt").textContent=--sel.q};
+ $("#pl").onclick=()=>{if(sel.s&&sel.q<p.st[sel.s])$("#qt").textContent=++sel.q;else toast(sel.s?"Limite do estoque":"Escolha um tamanho")};
+ const add=()=>{if(!sel.s){toast("Escolha um tamanho");return false}
+  const k=cart.find(i=>i.id===id&&i.s===sel.s&&i.c===sel.c),have=k?k.q:0;
+  if(have+sel.q>p.st[sel.s]){toast("Quantidade acima do estoque");return false}
+  k?k.q+=sel.q:cart.push({id,s:sel.s,c:sel.c,q:sel.q});save();upd();return true};
+ $("#ad").onclick=()=>{if(add()){toast("Adicionado ao carrinho");panel("pd",false);$("#ov").classList.remove("on")}};
+ $("#bn").onclick=()=>{if(add()){panel("pd",false);openCart()}};
+ panel("pd",true)}
+function upd(){const n=cart.reduce((a,i)=>a+i.q,0),c=$("#cc");c.textContent=n;c.classList.remove("bump");void c.offsetWidth;c.classList.add("bump")}
+function openCart(){
+ cart=cart.filter(i=>P.find(p=>p.id===i.id));
+ const t=cart.reduce((a,i)=>a+i.q*P.find(p=>p.id===i.id).p,0);
+ $("#cart").innerHTML=`<button class="ic x" onclick="$('#ov').click()" aria-label="Fechar">✕</button><h2 style="font-size:1.5rem;margin-bottom:10px">Carrinho</h2>`+(cart.length?cart.map((i,x)=>{const p=P.find(q=>q.id===i.id);return `<div class="row"><div class="t"></div><div class="i"><b>${esc(p.n)}</b><br>${esc(i.s)} · ${esc(i.c)}<br><span class="pr" style="font-size:.9rem">${brl(p.p)}</span></div><div class="q"><button data-d="${x}" data-v="-1">−</button> ${i.q} <button data-d="${x}" data-v="1">+</button><br><button data-r="${x}" style="width:auto;padding:0 8px;margin-top:6px">Remover</button></div></div>`}).join("")+`<p style="font-weight:700;font-size:1.2rem;margin:16px 0">Total: <span class="pr">${brl(t)}</span></p><button class="btn" style="width:100%;margin-bottom:10px" id="fin">FINALIZAR COMPRA</button><button class="btn o" style="width:100%" onclick="$('#ov').click()">CONTINUAR COMPRANDO</button>`:`<div class="empty">Seu carrinho está vazio. Escolha uma peça para começar.</div>`);
+ panel("cart",true);const f=$("#fin");if(f)f.onclick=checkout}
+$("#bc").onclick=openCart;
+$("#cart").addEventListener("click",e=>{
+ const d=e.target.closest("[data-d]"),r=e.target.closest("[data-r]");
+ if(d){const i=cart[+d.dataset.d],p=P.find(q=>q.id===i.id),n=i.q+ +d.dataset.v;if(n<1)return;if(n>p.st[i.s]){toast("Limite do estoque");return}i.q=n}
+ if(r)cart.splice(+r.dataset.r,1);
+ if(d||r){save();upd();openCart()}});
+const pad=n=>String(n).padStart(5,"0");
+let LAST=null;
+function checkout(){
+ const t=cart.reduce((a,i)=>a+i.q*P.find(p=>p.id===i.id).p,0),px=PX&&PX.chave;
+ $("#cart").innerHTML=XB+'<h2 style="font-size:1.5rem;margin-top:30px">Checkout</h2>'+(px?`<div class="note" style="margin:12px 0"><b>Pagamento por Pix</b><br>Total: ${brl(t)}<br>Chave (${esc(PX.tipo)}): <b>${esc(PX.chave)}</b><br>Titular: ${esc(PX.titular)}${PX.banco?" · "+esc(PX.banco):""}<br><span class="av">Faça o Pix, depois finalize o pedido e envie o comprovante do banco ao dono. O pedido só vale depois que o dono conferir o pagamento.</span></div><div class="fm"><input id="cn" placeholder="Nome completo" autocomplete="name"><input id="ct" placeholder="Telefone / WhatsApp" inputmode="tel" autocomplete="tel"><input id="cp" placeholder="CEP" inputmode="numeric" autocomplete="postal-code" maxlength="9" oninput="mascCep(this)"><p id="cm" class="av" role="status" style="margin:0"></p><input id="cr" placeholder="Rua" autocomplete="address-line1"><input id="cnum" placeholder="Número" inputmode="numeric"><input id="cco" placeholder="Complemento (opcional)"><input id="cb" placeholder="Bairro"><input id="cci" placeholder="Cidade" autocomplete="address-level2"><input id="ces" placeholder="Estado (UF)" maxlength="2" autocomplete="address-level1" style="text-transform:uppercase"><button class="btn o" onclick="copiaPix()">COPIAR CHAVE PIX</button><button class="btn" id="fin2" onclick="finalizar()">FINALIZAR PEDIDO</button></div>`:'<div class="note" style="margin:12px 0">Pagamento ainda não configurado. O dono precisa cadastrar a chave Pix na área do dono. Nenhum pagamento é simulado.</div>')+'<button class="btn o" style="width:100%;margin-top:10px" onclick="openCart()">VOLTAR AO CARRINHO</button>'}
+async function copiaPix(){try{await navigator.clipboard.writeText(PX.chave);toast("Chave Pix copiada")}catch(e){toast("Copie a chave manualmente")}}
+async function nextNum(){
+ const sq=DB.collection("seq"),me=Math.random().toString(36).slice(2);
+ let n=(await sq.get()).size;
+ while(n<=10000){
+  const r=sq.doc(pad(n));
+  for(let k=0;k<4;k++){
+   const a=await r.acquire({holder:me,ttlMs:8000});
+   if(a.acquired){const g=await r.get();if(!g.exists){await r.set({t:Date.now()});return n}break}
+   await new Promise(z=>setTimeout(z,500));
+  }
+  n++;
+ }
+ throw new Error("LIMITE")}
+async function finalizar(){
+ const g=x=>$("#"+x).value.trim(),nome=g("cn"),tel=g("ct"),cep=g("cp").replace(/\D/g,""),uf=g("ces").toUpperCase();
+ if(!nome||cep.length!==8||!g("cr")||!g("cnum")||!g("cb")||!g("cci")||uf.length!==2){toast("Preencha nome, CEP, rua, número, bairro, cidade e estado");return}
+ const end=`${g("cr")}, ${g("cnum")}${g("cco")?" - "+g("cco"):""} - ${g("cb")}, ${g("cci")}/${uf} - CEP ${g("cp")}`;
+ if(!cart.length)return;
+ for(const i of cart){const p=P.find(q=>q.id===i.id);if(!p||i.q>(p.st[i.s]||0)){toast("Estoque insuficiente em "+(p?p.n:"um item"));return}}
+ if(!DB||!PX.wa){toast("Pedidos indisponíveis agora. O dono precisa cadastrar o WhatsApp.");return}
+ const b=$("#fin2");b.disabled=true;b.textContent="Registrando…";
+ try{
+  const n=await nextNum();
+  const itens=cart.map(i=>{const p=P.find(q=>q.id===i.id);return{n:p.n,s:i.s,c:i.c,q:i.q,u:p.p,img:p.img||""}});
+  const o={num:n,itens,total:itens.reduce((a,x)=>a+x.q*x.u,0),pag:"pix",st:"aguardando_pagamento",t:Date.now()};
+  await DB.doc("orders/"+pad(n)).set(o);
+  cart=[];save();upd();obrigado({...o,nome,end,tel});
+ }catch(e){b.disabled=false;b.textContent="FINALIZAR PEDIDO";toast(e&&e.message==="LIMITE"?"Limite de pedidos atingido":"Não foi possível registrar o pedido")}}
+function recTxt(o){
+ return ["COMPROVANTE DE PEDIDO - NOME DA LOJA","Pedido: #"+pad(o.num),"Data: "+new Date(o.t).toLocaleString("pt-BR"),"Cliente: "+o.nome,"Entrega: "+o.end,"","Itens:",...o.itens.map(x=>`- ${x.n} (${x.s}, ${x.c}) x${x.q} = ${brl(x.u*x.q)}`),"","Total: "+brl(o.total),"Pagamento: Pix, aguardando confirmação do dono.","Este comprovante registra o pedido e não comprova o pagamento."].join("\n")}
+function obrigado(o){
+ const t=$("#ty");LAST=o;
+ t.innerHTML=`<div class="tyw"><button class="ic x" onclick="fechaTy()" aria-label="Fechar">✕</button><span class="tag">PEDIDO REGISTRADO</span><h1>OBRIGADO PELA COMPRA!</h1><p class="sub">${esc(o.nome)}, recebemos o seu pedido. Ele será confirmado quando o dono conferir o seu Pix.</p><div class="tyn">#${pad(o.num)}</div><p class="av">Número de identificação do pedido</p><div class="tyc">${o.itens.map(x=>`<div class="row"><div class="t">${x.img?`<img src="${esc(x.img)}" alt="${esc(x.n)}" style="width:100%;height:100%;object-fit:cover;border-radius:8px">`:""}</div><div class="i"><b>${esc(x.n)}</b><br>${esc(x.s)} · ${esc(x.c)} · x${x.q}<br><span class="pr" style="font-size:.9rem">${brl(x.u*x.q)}</span></div></div>`).join("")}<p style="font-weight:700;margin:12px 0 0">Total: <span class="pr">${brl(o.total)}</span></p></div><div class="tyc"><b>COMPROVANTE DO PEDIDO</b><pre>${esc(recTxt(o))}</pre></div><div class="fm"><button class="btn" onclick="baixaRec()">BAIXAR COMPROVANTE</button>${PX.wa?'<button class="btn o" onclick="zap()">ENVIAR PEDIDO NO WHATSAPP</button>':""}<button class="btn o" onclick="fechaTy()">CONTINUAR COMPRANDO</button></div></div>`;
+ panel("cart",false);t.classList.add("on");t.scrollTop=0}
+function fechaTy(){$("#ty").classList.remove("on")}
+function mascCep(i){let v=i.value.replace(/\D/g,"").slice(0,8);i.value=v.length>5?v.slice(0,5)+"-"+v.slice(5):v;if(v.length===8)buscaCep(v);else $("#cm").textContent=""}
+async function buscaCep(v){
+ const m=$("#cm");m.textContent="Buscando endereço…";
+ try{const r=await fetch("https://viacep.com.br/ws/"+v+"/json/");const j=await r.json();if(!r.ok||j.erro)throw 0;
+  $("#cr").value=j.logradouro||"";$("#cb").value=j.bairro||"";$("#cci").value=j.localidade||"";$("#ces").value=j.uf||"";m.textContent="Endereço encontrado. Confira e informe o número.";$("#cnum").focus()}
+ catch(e){m.textContent="Não foi possível buscar o CEP. Preencha os campos manualmente."}}
+async function baixaRec(){
+ try{const D=await claude.use("downloads");if(!D)throw 0;await D.save({filename:"comprovante-pedido-"+pad(LAST.num)+".txt",data:recTxt(LAST)})}
+ catch(e){try{await navigator.clipboard.writeText(recTxt(LAST));toast("Download indisponível. Comprovante copiado.")}catch(x){toast("Faça uma captura de tela do comprovante")}}}
+function zap(){
+ const n=String(PX.wa||"").replace(/\D/g,""),w=n.startsWith("55")?n:"55"+n;
+ const m=`Olá! Fiz o pedido #${pad(LAST.num)} na Nome da Loja.\nTotal: ${brl(LAST.total)}\nNome: ${LAST.nome}\nTelefone: ${LAST.tel}\nEndereço: ${LAST.end}\nVou enviar o comprovante do Pix.`;
+ window.open("https://wa.me/"+w+"?text="+encodeURIComponent(m),"_blank","noopener")}
+/* ===== LOJA + ÁREA DO DONO ===== */
+const esc=t=>String(t??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pic=p=>p.img?`<img src="${esc(p.img)}" alt="${esc(p.n)}" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover">`:"SEM FOTO";
+const XB='<button class="ic x" onclick="$(\'#ov\').click()" aria-label="Fechar">✕</button>';
+const SZ=["P","M","G","GG","Único"];
+let DB=null,OWN=false,ED={},PX={},ORD=[],A={open:false,tab:"produtos",q:""};
+const IC={box:'<path d="M21 8 12 3 3 8v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/>',plus:'<path d="M12 5v14M5 12h14"/>',wallet:'<path d="M3 7h15a3 3 0 0 1 3 3v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM3 7l12-3v3"/><circle cx="16.5" cy="14" r="1"/>',gear:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/>',store:'<path d="M3 9l1.5-5h15L21 9M3 9v11h18V9M9 20v-6h6v6"/>',out:'<path d="M9 21H5V3h4M16 17l5-5-5-5M21 12H9"/>',search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>',edit:'<path d="M4 20h4L19 9l-4-4L4 16zM14 6l4 4"/>',trash:'<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/>',lock:'<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'};
+const ic=(n,c="")=>`<svg class="oi ${c}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IC[n]}</svg>`;
+async function boot(){
+ try{
+  if(!window.claude)return;
+  DB=await claude.use("db");if(!DB)return;
+  const U=await claude.use("user");OWN=U?await U.isOwner():false;
+  DB.collection("products").onSnapshot(s=>{
+   P=s.docs.map(d=>{const x=d.data()||{};return{id:d.id,n:x.n||"",c:x.c||"",d:x.d||"",p:Number(x.p)||0,o:x.o?Number(x.o):null,cor:Array.isArray(x.cor)?x.cor:[],st:x.st&&typeof x.st==="object"?x.st:{},novo:!!x.novo,ativo:x.ativo!==false,img:x.img||"",t:Number(x.t)||0}}).filter(p=>OWN||p.ativo);
+   cart=cart.filter(i=>P.find(p=>p.id===i.id));save();upd();list();
+   if(A.open&&OWN){metr();if(A.tab==="produtos")rows()}
+  },()=>{});
+  DB.doc("config/pix").onSnapshot(s=>{PX=s.exists?(s.data()||{}):{};if(A.open&&OWN)metr()},()=>{});
+  if(OWN)DB.collection("orders").onSnapshot(s=>{ORD=s.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(b.t||0)-(a.t||0));if(A.open&&A.tab==="pedidos")body()},()=>{});
+ }catch(e){}}
+function dono(){A.open=true;A.tab="produtos";$("#own").classList.add("on");document.body.style.overflow="hidden";render()}
+function closeOwn(){A.open=false;$("#own").classList.remove("on");document.body.style.overflow=""}
+const LOGO='<div class="olt"><div class="mono">NL</div><div><b>NOME DA LOJA</b><small>Painel de controle</small></div></div>';
+function render(){
+ const o=$("#own");
+ if(!A.auth){o.innerHTML=`<div class="olg"><div class="olc">${LOGO}<div class="olb">${ic("lock","big")}<h2>ÁREA DO DONO<br><span>ACESSO RESTRITO</span></h2><form class="ofm" onsubmit="entrarDono(event)"><div class="f"><label>E-mail do dono<input name="em" type="email" autocomplete="username" value="Exemplo00@gmail.com" required></label></div><div class="f"><label>Senha de acesso<input id="lp" name="pw" type="password" autocomplete="current-password" value="exemplo" required></label></div><div class="f"><label class="ck"><input type="checkbox" onclick="verSenha()"> Mostrar senha</label></div><p id="lm" class="omut" role="status"></p><div class="f obar"><button class="ob gd" type="submit">Entrar no painel</button><button class="ob ln" type="button" onclick="closeOwn()">Voltar à loja</button></div></form></div></div></div>`;return}
+ const T=[["produtos","box","Catálogo de produtos"],["adicionar","plus","Adicionar produto"],["pedidos","box","Pedidos"],["recebimento","wallet","Conta e recebimento (Pix)"],["config","gear","Configurações e backup"]];
+ o.innerHTML=`<header class="oh"><div class="ow oht">${LOGO}<div class="oact"><button class="oha" onclick="closeOwn()">${ic("store")}<span>Ver loja</span></button><button class="oha" onclick="sairOwn()">${ic("out")}<span>Sair</span></button></div></div><nav class="ow otabs">${T.map(t=>`<button class="${A.tab===t[0]?"on":""}" onclick="tab('${t[0]}')">${ic(t[1])}${t[2]}</button>`).join("")}</nav></header><main class="ow">${OWN?"":'<div class="oc omut" style="margin-top:16px">Você entrou, mas esta sessão não tem permissão para salvar alterações. Abra a página com a conta dona do artifact.</div>'}<div class="omt" id="mt"></div><div id="ob"></div></main>`;
+ metr();body()}
+function tab(t){if(t==="adicionar")ED={ativo:true,cor:[],st:{}};A.tab=t;render()}
+function metr(){
+ const m=$("#mt");if(!m)return;
+ const u=P.reduce((a,p)=>a+tot(p),0),v=P.reduce((a,p)=>a+tot(p)*p.p,0);
+ m.innerHTML=`<div class="oc"><span>Total de modelos</span><p>${P.length}</p><small>Itens no catálogo</small></div><div class="oc"><span>Peças em estoque</span><p>${u} un.</p><small>Soma dos tamanhos</small></div><div class="oc"><span>Valor total estoque</span><p>${brl(v)}</p><small>Preço de venda estimado</small></div><div class="oc dk"><span>Conta de recebimento</span><p>${PX.chave?"PIX CONFIGURADO":"PENDENTE"}</p><small>${esc(PX.chave||"Cadastre a chave Pix")}</small></div>`}
+function body(){
+ const b=$("#ob");
+ if(A.tab==="produtos"){
+  const es=P.filter(p=>tot(p)===0).length,bx=P.filter(p=>tot(p)>0&&tot(p)<=3).length;
+  b.innerHTML=`<div class="obar"><div class="osr">${ic("search")}<input id="oq" value="${esc(A.q)}" placeholder="Buscar por nome ou categoria..." aria-label="Buscar produtos" oninput="A.q=this.value;rows()"></div><button class="ob gd" onclick="tab('adicionar')">${ic("plus")} Novo produto</button></div><p class="omut">Esgotados: ${es} · Estoque baixo (3 ou menos): ${bx}</p><div id="orows"></div>`;rows();return}
+ if(A.tab==="adicionar"){
+  const v=x=>esc(x??"");
+  b.innerHTML=`<form class="ocd ofm" onsubmit="salvarP(event)"><div class="f"><h3>${ED.id?"EDITAR PRODUTO":"CADASTRAR PRODUTO NO SITE"}</h3></div>
+  <div class="f"><label>Foto do produto<input type="file" accept="image/*" onchange="foto(this)"></label><div id="ps" class="omut" role="status" style="margin-top:8px"></div><div id="pv" style="margin-top:8px">${ED.img?`<img src="${v(ED.img)}" alt="" style="width:110px;border-radius:12px">`:""}</div></div>
+  <div class="f"><label>Nome do produto *<input name="n" value="${v(ED.n)}" required maxlength="80"></label></div>
+  <div><label>Categoria<input name="c" value="${v(ED.c)}" maxlength="40"></label></div>
+  <div><label>Cores (separadas por vírgula)<input name="cor" value="${v((ED.cor||[]).join(", "))}"></label></div>
+  <div><label>Preço de venda (R$) *<input name="p" type="number" step="0.01" min="0" value="${ED.p??""}" required></label></div>
+  <div><label>Preço antigo (R$), só se houver promoção real<input name="o" type="number" step="0.01" min="0" value="${ED.o??""}"></label></div>
+  <div class="f"><label>Estoque por tamanho</label><div class="osz">${SZ.map(s=>`<label>${s}<input name="st_${s}" type="number" min="0" step="1" value="${ED.st&&ED.st[s]!=null?ED.st[s]:""}"></label>`).join("")}</div></div>
+  <div class="f"><label>Descrição, material e composição<textarea name="d" rows="3" maxlength="800">${v(ED.d)}</textarea></label></div>
+  <div><label class="ck"><input type="checkbox" name="novo" ${ED.novo?"checked":""}> Lançamento</label></div>
+  <div><label class="ck"><input type="checkbox" name="ativo" ${ED.ativo!==false?"checked":""}> Publicado na loja</label></div>
+  <div class="f obar"><button class="ob gd" type="submit">Salvar produto</button><button class="ob ln" type="button" onclick="tab('produtos')">Cancelar</button></div></form>`;return}
+ if(A.tab==="pedidos"){
+  const S=[["aguardando_pagamento","Aguardando pagamento"],["pagamento_confirmado","Pagamento confirmado"],["em_preparacao","Em preparação"],["enviado","Enviado"],["entregue","Entregue"],["cancelado","Cancelado"]];
+  b.innerHTML=`<p class="omut">Pedidos: ${ORD.length}. Confirme o pagamento só depois de ver o Pix no seu banco.</p>`+(ORD.length?ORD.map(o=>`<div class="opr"><div class="opi"><b>#${esc(o.id)}</b><small>${brl(Number(o.total)||0)} · ${new Date(o.t||0).toLocaleString("pt-BR")}<br>Nome e endereço do cliente chegam pelo WhatsApp.</small><div>${(o.itens||[]).map(x=>`<span class="ochp">${esc(x.n)} (${esc(x.s)}, ${esc(x.c)}) x${Number(x.q)||0}</span>`).join("")}</div></div><div class="opa"><select onchange="stP('${esc(o.id)}',this.value)" aria-label="Estado do pedido">${S.map(x=>`<option value="${x[0]}" ${o.st===x[0]?"selected":""}>${x[1]}</option>`).join("")}</select></div></div>`).join(""):'<div class="oc omut">Nenhum pedido ainda.</div>');return}
+ if(A.tab==="recebimento"){
+  const v=x=>esc(x??""),T=["CPF","CNPJ","E-mail","Telefone","Aleatória"];
+  b.innerHTML=`<form class="ocd ofm" onsubmit="salvarPx(event)"><div class="f"><h3>CONTA E PIX PARA RECEBER PAGAMENTOS</h3><p>Estes dados aparecem para o cliente no checkout. Não coloque senha nem dados de cartão. O pedido só deve ser liberado depois que você conferir o pagamento no seu banco.</p></div>
+  <div><label>Tipo da chave<select name="tipo">${T.map(t=>`<option ${PX.tipo===t?"selected":""}>${t}</option>`).join("")}</select></label></div>
+  <div><label>Chave Pix *<input name="chave" value="${v(PX.chave)}" required maxlength="80"></label></div>
+  <div><label>Nome do titular *<input name="titular" value="${v(PX.titular)}" required maxlength="80"></label></div>
+  <div><label>Banco<input name="banco" value="${v(PX.banco)}" maxlength="40"></label></div>
+  <div class="f"><label>WhatsApp para receber pedidos e comprovantes (com DDD)<input name="wa" inputmode="tel" value="${v(PX.wa)}" maxlength="20"></label></div>
+  <div class="f obar"><button class="ob gd" type="submit">Salvar conta</button></div></form>`;return}
+ b.innerHTML=`<div class="ocd"><h3>BACKUP DOS PRODUTOS</h3><p>Baixe uma cópia do catálogo em JSON ou restaure a partir de um backup.</p><div class="obar"><button class="ob dk" onclick="exportar()">Exportar produtos</button></div><label class="omut" style="display:block">Importar backup (.json)<br><input type="file" accept="application/json,.json" onchange="importar(this)"></label></div><div class="ocd"><h3>SEGURANÇA</h3><p>Não existe senha escrita no código. O acesso a este painel vale só para a conta dona do artifact, e a gravação de produtos e dados Pix exige permissão de editor.</p></div>`}
+function rows(){
+ const q=A.q.toLowerCase(),r=P.filter(p=>!q||(p.n+" "+p.c).toLowerCase().includes(q)),o=$("#orows");if(!o)return;
+ o.innerHTML=r.length?r.map(p=>`<div class="opr"><div class="oth">${p.img?`<img src="${esc(p.img)}" alt="">`:ic("box")}</div><div class="opi"><b>${esc(p.n)}</b><small>${esc(p.c)||"Sem categoria"} · ${brl(p.p)}${p.o?` (antes ${brl(p.o)})`:""}</small><div>${Object.entries(p.st).map(([s,n])=>`<span class="ochp ${n===0?"z":n<=2?"w":""}">${esc(s)}: ${n}</span>`).join("")||'<span class="ochp z">Sem estoque</span>'}${p.ativo?"":'<span class="ochp">Oculto</span>'}${p.novo?'<span class="ochp g">Lançamento</span>':""}${p.o?'<span class="ochp g">Promoção</span>':""}</div></div><div class="opa"><button class="ob ln" onclick="togP('${p.id}')">${p.ativo?"Ocultar":"Publicar"}</button><button class="ob ln" onclick="formP('${p.id}')">Editar</button><button class="ob ln" onclick="delP('${p.id}',this)">Excluir</button></div></div>`).join(""):'<div class="oc omut">Nenhum produto encontrado.</div>'}
+function formP(id){ED={...P.find(p=>p.id===id)};A.tab="adicionar";render()}
+async function togP(id){const p=P.find(x=>x.id===id);try{await DB.collection("products").doc(id).update({ativo:!p.ativo})}catch(e){toast("Não foi possível alterar")}}
+async function foto(i){
+ const fl=i.files[0];if(!fl)return;
+ ps("Enviando foto…");try{const AS=await claude.use("assets");if(!AS){ps("Envio de fotos indisponível nesta sessão. Abra com a conta dona do artifact.");return}
+  const r=await AS.upload(fl);ED.img=r.url||("/_blob/"+r.id);ps("Foto enviada.");$("#pv").innerHTML=`<img src="${esc(ED.img)}" alt="" style="width:110px;border-radius:12px">`;
+ }catch(x){ps("Falha no envio: "+((x&&(x.message||x.code))||"tente outra imagem")+".")}}
+function ps(t){const e=$("#ps");if(e)e.textContent=t}
+async function salvarP(e){
+ e.preventDefault();const f=e.target,st={};
+ SZ.forEach(s=>{const q=f["st_"+s].value;if(q!=="")st[s]=Math.max(0,parseInt(q,10)||0)});
+ const p=+f.p.value,o=f.o.value?+f.o.value:null;
+ if(o!==null&&o<=p){toast("O preço antigo deve ser maior que o atual");return}
+ const d={n:f.n.value.trim(),c:f.c.value.trim(),d:f.d.value.trim(),p,o,cor:f.cor.value.split(",").map(x=>x.trim()).filter(Boolean),st,novo:f.novo.checked,ativo:f.ativo.checked,img:ED.img||"",t:ED.t||Date.now()};
+ try{const col=DB.collection("products");ED.id?await col.doc(ED.id).set(d):await col.add(d);toast("Produto salvo");tab("produtos")}
+ catch(x){toast("Não foi possível salvar")}}
+async function delP(id,b){
+ if(b.dataset.c!=="1"){b.dataset.c="1";b.textContent="Confirmar";return}
+ try{await DB.collection("products").doc(id).delete();toast("Produto excluído")}catch(x){toast("Não foi possível excluir")}}
+async function stP(id,v){try{await DB.doc("orders/"+id).update({st:v})}catch(e){toast("Não foi possível atualizar o pedido")}}
+async function salvarPx(e){
+ e.preventDefault();const f=e.target;
+ const d={tipo:f.tipo.value,chave:f.chave.value.trim(),titular:f.titular.value.trim(),banco:f.banco.value.trim(),wa:f.wa.value.trim()};
+ try{await DB.doc("config/pix").set(d);toast("Conta salva")}catch(x){toast("Não foi possível salvar")}}
+async function exportar(){
+ try{const D=await claude.use("downloads");if(!D){toast("Download indisponível");return}
+  await D.save({filename:"produtos-loja.json",data:JSON.stringify(P.map(({id,...r})=>r),null,2)});
+ }catch(x){toast("Download não concluído")}}
+async function importar(i){
+ const fl=i.files[0];if(!fl)return;
+ try{const a=JSON.parse(await fl.text());if(!Array.isArray(a))throw 0;let k=0;
+  for(const x of a.slice(0,200)){if(!x||!x.n||!(+x.p>=0))continue;
+   const st={};if(x.st&&typeof x.st==="object")for(const s of SZ)if(x.st[s]!=null)st[s]=Math.max(0,parseInt(x.st[s],10)||0);
+   await DB.collection("products").add({n:String(x.n).slice(0,80),c:String(x.c||"").slice(0,40),d:String(x.d||"").slice(0,800),p:+x.p,o:x.o?+x.o:null,cor:Array.isArray(x.cor)?x.cor.map(String).slice(0,20):[],st,novo:!!x.novo,ativo:x.ativo!==false,img:String(x.img||""),t:Date.now()+k});k++}
+  toast(k+" produtos importados");
+ }catch(x){toast("Arquivo de backup inválido")}}
+const HE="e8f44f046e827f658914124df9c5ebb3b07c564fd1bde04414e1ecabae2ddbc4",HP="c0fc3c713f09a43384ac08f7d91fca430dcbc6466fff9284ce4571bdc2c8f9f9";
+let tries=0,lock=0;
+const sha=async t=>[...new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(t)))].map(b=>b.toString(16).padStart(2,"0")).join("");
+async function entrarDono(e){
+ e.preventDefault();const f=e.target,m=$("#lm");
+ if(Date.now()<lock){m.textContent="Muitas tentativas. Aguarde alguns segundos.";return}
+ let ok=false;try{ok=(await sha(f.em.value.trim().toLowerCase()))===HE&&(await sha(f.pw.value))===HP}catch(x){}
+ if(ok){tries=0;A.auth=true;render()}else{if(++tries>=5){lock=Date.now()+30000;tries=0}m.textContent="E-mail ou senha incorretos."}}
+function verSenha(){const i=$("#lp");i.type=i.type==="password"?"text":"password"}
+function sairOwn(){A.auth=false;closeOwn()}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&A.open)closeOwn()});
+$("#dono").onclick=e=>{e.preventDefault();$("#nav").classList.remove("open");dono()};
+upd();list();boot();</script>
+</body>
+</html>
